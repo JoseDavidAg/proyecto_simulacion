@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -22,13 +23,61 @@ import javax.swing.table.DefaultTableModel;
  * @author ambro
  */
 public class Ingresar_CSV extends javax.swing.JFrame {
-
+private String nombreArchivo="Plantilla/Plantilla_simulacion.csv";
     /**
      * Creates new form Principal
      */
     public Ingresar_CSV() {
         initComponents();
-       
+        
+    // Obtener el archivo desde los recursos del proyecto
+    File archivoCSV;
+    try {
+        archivoCSV = new File(getClass().getClassLoader().getResource(nombreArchivo).toURI());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "No se pudo localizar el archivo dentro del proyecto: " + nombreArchivo);
+        return;
+    }
+
+    // Verificar si el archivo existe
+    if (!archivoCSV.exists()) {
+        JOptionPane.showMessageDialog(this, "El archivo especificado no existe en los recursos del proyecto: " + nombreArchivo);
+        return;
+    }
+
+    // Leer el archivo
+    try (BufferedReader br = new BufferedReader(new FileReader(archivoCSV))) {
+        String line;
+        ContenidoCSV contenidoCSV = new ContenidoCSV();
+        contenidoCSV.limpiar();
+
+        DefaultTableModel model = (DefaultTableModel) JTableCSV.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(6); // Fijar el número de columnas a 6
+
+        // Establecer nombres de columna genéricos
+        model.setColumnIdentifiers(new String[]{"Variables Años", "2020", "2021", "2022", "2023", "Unidad"});
+
+        while ((line = br.readLine()) != null) {
+            // Dividir la línea en columnas
+            String[] values = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+
+            // Asegurar que haya siempre 6 columnas
+            if (values.length < 6) {
+                values = Arrays.copyOf(values, 6); // Completar con valores vacíos si faltan
+            }
+
+            contenidoCSV.agregarFila(values); // Agregar a la estructura
+            model.addRow(values); // Agregar la fila al JTable
+        }
+
+        JOptionPane.showMessageDialog(this, "CSV cargado correctamente desde los recursos del proyecto.");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(this, "Error al leer el archivo CSV: " + e.getMessage());
+    }
+    
+    
+        
     }
   
     
@@ -56,6 +105,7 @@ public class Ingresar_CSV extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         table1 = new javax.swing.JScrollPane();
         JTableCSV = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
 
         jPanel6.setBackground(new java.awt.Color(0, 38, 79));
         jPanel6.setForeground(new java.awt.Color(0, 38, 79));
@@ -179,20 +229,36 @@ public class Ingresar_CSV extends javax.swing.JFrame {
 
         Panel1.add(btnSeleccionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 170, 40));
 
+        table1.setColumnHeaderView(null);
+        table1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
         JTableCSV.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Variables  /  Años", "2020", "2021", "2022", "2023", "Unidad"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         table1.setViewportView(JTableCSV);
 
-        Panel1.add(table1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 820, 300));
+        Panel1.add(table1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 820, 300));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Ejemplo del archivo CSV a ingresar:");
+        Panel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
         getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 570));
 
@@ -201,6 +267,7 @@ public class Ingresar_CSV extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         this.dispose();
+        
        
     }//GEN-LAST:event_jLabel5MouseClicked
 
@@ -219,10 +286,10 @@ public class Ingresar_CSV extends javax.swing.JFrame {
 
             DefaultTableModel model = (DefaultTableModel) JTableCSV.getModel();
             model.setRowCount(0);
-            model.setColumnCount(5); // Fijar el número de columnas a 5
+            model.setColumnCount(6); // Fijar el número de columnas a 5
 
-            // Establecer nombres de columna genéricos
-            model.setColumnIdentifiers(new String[]{"Columna 1", "Columna 2", "Columna 3", "Columna 4", "Columna 5"});
+            // Establecer nombres de columna genéricos "Variables  /  Años", "2020", "2021", "2022", "2023", "Unidad"
+            model.setColumnIdentifiers(new String[]{ "Variables Años", "2020", "2021", "2022", "2023", "Unidad"});
 
             boolean firstLine = true;
             while ((line = br.readLine()) != null) {
@@ -279,6 +346,7 @@ public class Ingresar_CSV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;

@@ -19,7 +19,7 @@ public class ContenidoCSV {
 
     // Agrega una fila asegurando que tenga 5 columnas
     public void agregarFila(String[] fila) {
-        String[] filaAjustada = ajustarColumnas(fila, 5);
+        String[] filaAjustada = ajustarColumnas(fila, 6);
         filas.add(filaAjustada);
     }
 

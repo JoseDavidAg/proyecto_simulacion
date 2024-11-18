@@ -1,0 +1,28 @@
+Poblacion sana inicial,"1,500,000,000","1,480,000,000","1,460,000,000","1,440,000,000",individuos
+Poblacion enferma inicial,150000000,160000000,170000000,180000000,individuos
+Tasa de recuperacion,65,63,64,62,porcentaje 
+Tasa de incidencia,7,7.2,7.5,7.8,porcentaje 
+Tasa de residuos por persona,0.9,1,1.1,1.2,toneladas
+Tabla de desechos,1200000000,1250000000,1300000000,1350000000,toneladas
+Capacidad de relleno,3000000000,3100000000,3200000000,3300000000,toneladas
+Frecuencia,250,255,260,265,dias
+Capacidad de camiones,25000,26000,27000,28000,toneladas
+Equipos recolectados,40,42000,44000,46000,unidades
+Tasa de natalidad normal,2.5,2.4,2.3,2.2,percentaje
+Esperanza de vida normal,78,78,77,77,años
+Daño ambiental,50,55,60,65,unidaes
+Desechos Emitidos,"100,000,000","120,000,000","140,000,000","160,000,000",toneladas
+Tasa de natalidad,17987475,1.748.664,1.698.581,1.648.497,porcentaje 
+Nacimientos,1708810125,166.997.412,163.063.728,159.079.961,individuos
+Poblacion sana,8810125,1.897.412,10.863.728,18.299.605,individuos
+Recuperacion,4000,3888,3854,3735,individuos
+Incidencia,5700,5539,5376,5307.5,individuos
+Poblacion enferma,1633333333,1587,145.933.333,1512.5,individuos
+Muertes,6666666667,64,626.666.667,60,individuos
+Esperanza de vida,7.875,0.84,8.925,945,años
+Daño ambiental para natalidad,27,28,289,297,unidades
+Daño ambiental para esperanza de vida,11.25,12,12.75,13.5,unidades
+Discrepancia,10000,2000,1000,-6000,unidades
+Inadecuada ocupacion del relleno,30000,32000,31000,40000,porcentaje 
+Desechos recolectados,7200,8580,8100,11520,toneladas
+Desechos sin recolectar,22800,23420,22900,28480,toneladas
