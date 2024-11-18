@@ -4,8 +4,13 @@
  */
 package Vista;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Point;
+import javax.swing.JButton;
+import javax.swing.JScrollBar;
+import javax.swing.SwingUtilities;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 
 /**
  *
@@ -19,6 +24,18 @@ public class Informacion extends javax.swing.JFrame {
     public Informacion() {
         initComponents();
         
+        
+         SwingUtilities.invokeLater(() -> {
+            jScrollPane1.getViewport().setViewPosition(new Point(200,0)); // Ajusta (x, y)
+        });
+         
+         // Personalizar las barras de desplazamiento
+        JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
+        verticalScrollBar.setUI(new Principal2.CustomScrollBarUI());
+
+        JScrollBar horizontalScrollBar = jScrollPane1.getHorizontalScrollBar();
+        horizontalScrollBar.setUI(new Principal2.CustomScrollBarUI());
+       
  
        
     }
@@ -38,18 +55,15 @@ public class Informacion extends javax.swing.JFrame {
 
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         Panel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
+        jTextArea3 = new javax.swing.JTextArea();
+        jTextArea4 = new javax.swing.JTextArea();
 
         jPanel6.setBackground(new java.awt.Color(0, 38, 79));
         jPanel6.setForeground(new java.awt.Color(0, 38, 79));
@@ -77,24 +91,16 @@ public class Informacion extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(940, 570));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane1.setMaximumSize(new java.awt.Dimension(940, 570));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(940, 570));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(940, 570));
+
         Panel1.setBackground(new java.awt.Color(0, 16, 33));
         Panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-        );
-
-        Panel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 20, 490));
 
         jPanel1.setBackground(new java.awt.Color(0, 38, 79));
         jPanel1.setForeground(new java.awt.Color(0, 38, 79));
@@ -134,65 +140,43 @@ public class Informacion extends javax.swing.JFrame {
 
         Panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 940, 70));
 
-        jPanel8.setBackground(new java.awt.Color(0, 38, 79));
-        jPanel8.setForeground(new java.awt.Color(0, 52, 107));
-        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel8MouseClicked(evt);
-            }
-        });
-
-        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Variables y Método");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel13)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel13)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Panel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, 180, 30));
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(0, 16, 33));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("OBJETIVOS:\n1.- Objetivo General:  Simular y analizar el impacto de     factores\n ambientales, como la calidad   del aire y la gestión de   residuos, \nsobre la salud y la esperanza de vida de los habitantes de Oaxaca \nde     Juárez,    basándose     en     los     hallazgos     de  la    tesis.\n2.- Objetivos Específicos:\n  •Desarrollar un modelo matemático que relacione la  producción\nde   desechos   y   la   calidad   del   aire   con   la    incidencia   de\n enfermedades        y         la        esperanza          de              vida.\n •Evaluar    cómo  el   crecimiento poblacional y la contaminación \ninfluyen en la salud pública    y   en   las    tasas   de    mortalidad.\n •Generar una proyección sobre el comportamiento de la salud de\n la población en diferentes escenarios relacionados con la gestión\n de residuos y la calidad del aire");
-        jTextArea1.setBorder(null);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        Panel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 370, 240));
-
         jTextArea2.setEditable(false);
         jTextArea2.setBackground(new java.awt.Color(0, 16, 33));
         jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea2.setRows(5);
-        jTextArea2.setText("El    impacto de     los factores ambientales,   como la contaminación \ndel aire y la deficiencia de gestión de residuos, tiene efectos directos\n en la salud pública y la esperanza de vida.             Este  proyecto   de \nsimulación  se enfoca en analizar cómo estas variables afectan a   los\n habitantes de Oaxaca de Juárez. A través de un modelo matemático,\n se   establecen   relaciones   entre la  calidad del   aire,  los   residuos \ngenerados y la incidencia de enfermedades,   proyectando    distintos \nescenarios de salud pública. Los  resultados    permitirán     identificar \npuntos críticos y proponer    mejoras   en   la gestión   ambiental para \naumentar      la      calidad     de      vida         y   mitigar   los    efectos");
+        jTextArea2.setText("puntos críticos y proponer  mejoras en la gestión ambiental para aumentar  la  calidad  de vida y mitigar los efectos.");
         jTextArea2.setBorder(null);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        Panel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 390, 240));
+        Panel1.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 810, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fabrica.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        Panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+        Panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
 
-        getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 570));
+        jTextArea3.setEditable(false);
+        jTextArea3.setBackground(new java.awt.Color(0, 16, 33));
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea3.setRows(5);
+        jTextArea3.setText("                                                                                      VARIABLES\n\n1. Tasa de natalidad\n\tEs el porcentaje de personas que nacen en un período determinado. Se ve afectado por factores\n\tcomo la salud general de la población y el daño ambiental.\n\n2. Nacimientos\n\tEs la cantidad total de personas que nacen en un período específico.           Depende de cuántas \n\tpersonas estén sanas y de la tasa de natalidad.\n\n3. Población Sana\n\tEs el número de personas que se encuentran en buen estado de salud.          Este número se ve \n\tinfluenciado por los nacimientos, la recuperación de enfermedades y    la incidencia de nuevas \n\tenfermedades.\n\n4. Recuperación\n\tEs el proceso mediante el cual una persona mejora su estado de salud. Se relaciona con la canti-\n\tdad de personas enfermas y la efectividad de los tratamientos.\n\n5. Incidencia\n\tEs el momento en el que una persona sana se convierte en enferma. Este indicador muestra cuán-\n\ttas personas sanas contraen enfermedades en un período dado.\n\n6. Población Enfermería\n\tEs el número de personas que tienen alguna enfermedad o complicación de salud. Este grupo se \n\tdetermina por la cantidad de nuevas enfermedades, muertes y recuperaciones.\n\n7. Muertes\n\tEs la cantidad de personas que fallecen en un período determinado, ya sea por enfermedades o \n\tcausas naturales. Este dato refleja la salud general de la población enferma.\n\n8. Esperanza de vida\n\tEs el tiempo promedio que se espera que una persona viva. Se ve afectado por condiciones gene-\n\trales de salud y factores ambientales.\n\n9. Daño Ambiental para Natalidad\n\tSe refiere a los efectos negativos del entorno, como la contaminación, que pueden influir en la ca-\n\tpacidad de las personas paratener hijos.\n\n10. Discrepancia\n\tEs la diferencia entre la capacidad de un relleno sanitario y su ocupación real. Muestra cuán bien \n\tse están gestionando los desechos.\n\n11. Inadecuada Ocupación del Relleno\n\tSe refiere a la cantidad de desechos producidos que no están siendo gestionados adecuadame-\n\tte. Indica problemas en el manejo de residuos.\n\n\t\t\t\n\t\t\t   MÉTODOS\n\n•Modelado Matemático por Ecuaciones Diferenciales\n\tSe   utilizan    ecuaciones    diferenciales   para    modelar el    comportamiento    dinámico de    \n\tlas variables en el tiempo  (como nacimientos, muertes   y la evolución de la población sana y \n\tenferma).\n\n•Regresión lineal múltiple\n\tEste método estadístico permite evaluar la influencia de múltiples factores independientes (co-\n\tmo contaminación del aire y rersiduos) sobre una ariable dependiente (esperanza de vida o ta-\n\tsa de enfermedades)\n\n•Análisis de sensibilidad\n\tSe emplea   para   determinar   cómo los cambios en los parámetros (como la frecuencia de \n\trecolección de basura)   afectan   los resultados del modelo. Esto permite identificar las varia-\n\tbles más críticas para la salud pública.\n\n•Análisis de correlación\n\tSe    calcula el coeficiente     de evaluación entre     variables (por ejemplo,   entre   desechos \n\tno   recolectados   y   enfermedades respiratorias) para entender la intensidad de sus relaciones.\n");
+        jTextArea3.setBorder(null);
+        Panel1.add(jTextArea3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 810, 1590));
+
+        jTextArea4.setEditable(false);
+        jTextArea4.setBackground(new java.awt.Color(0, 16, 33));
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jTextArea4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea4.setRows(5);
+        jTextArea4.setText("El    impacto de     los factores ambientales,   como la contaminación\ndel aire y la deficiencia de gestión de residuos, tiene efectos directos\nen la salud pública y la esperanza de vida.             Este  proyecto   de\n simulación  se enfoca en analizar cómo estas variables afectan a   los\nhabitantes de Oaxaca de   Juárez. A través de un modelo matemático, \nse   establecen   relaciones   entre la  calidad del   aire,  los   residuos \ngenerados y la incidencia de enfermedades,   proyectando    distintos \n");
+        jTextArea4.setBorder(null);
+        Panel1.add(jTextArea4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 490, 220));
+
+        jScrollPane1.setViewportView(Panel1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,12 +186,6 @@ public class Informacion extends javax.swing.JFrame {
         Principal2 ventana2= new Principal2();
         ventana2.setVisible(true); 
     }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-        this.dispose();
-        Identificar_var ventana = new Identificar_var();
-        ventana.setVisible(true);
-    }//GEN-LAST:event_jPanel8MouseClicked
 
     
     public static void main(String args[]) {
@@ -246,17 +224,47 @@ public class Informacion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Panel1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
+
+    static class CustomScrollBarUI extends BasicScrollBarUI {
+        private static final int THUMB_SIZE = 10;
+
+        @Override
+        protected void configureScrollBarColors() {
+            this.thumbColor = new Color(0, 0, 0); // Color del "pulgar"
+            this.trackColor = new Color(230, 230, 230); // Color de la pista
+        }
+
+        protected Dimension getThumbSize() {
+            return new Dimension(THUMB_SIZE, THUMB_SIZE);
+        }
+
+        @Override
+        protected JButton createDecreaseButton(int orientation) {
+            return createZeroButton(); // Sin botones
+        }
+
+        @Override
+        protected JButton createIncreaseButton(int orientation) {
+            return createZeroButton(); // Sin botones
+        }
+
+        private JButton createZeroButton() {
+            JButton button = new JButton();
+            button.setPreferredSize(new Dimension(0, 0));
+            button.setMinimumSize(new Dimension(0, 0));
+            button.setMaximumSize(new Dimension(0, 0));
+            return button;
+        }
+    }
+
 }

@@ -33,7 +33,6 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         Panel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -44,24 +43,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(940, 570));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Panel1.setBackground(new java.awt.Color(0, 16, 33));
+        Panel1.setMaximumSize(new java.awt.Dimension(940, 570));
+        Panel1.setMinimumSize(new java.awt.Dimension(940, 570));
+        Panel1.setPreferredSize(new java.awt.Dimension(940, 570));
         Panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-        );
-
-        Panel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 20, 490));
 
         jButton1.setBackground(new java.awt.Color(0, 52, 107));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -73,7 +63,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        Panel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 90, 30));
+        Panel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 90, 30));
 
         jPanel1.setBackground(new java.awt.Color(0, 38, 79));
         jPanel1.setForeground(new java.awt.Color(0, 38, 79));
@@ -127,19 +117,19 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Martinez Ramirez Yael Agustin");
-        Panel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+        Panel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Integrantes:");
-        Panel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
+        Panel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Ambrosio González José David");
-        Panel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
+        Panel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, -1, -1));
 
         getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 570));
 
@@ -197,6 +187,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

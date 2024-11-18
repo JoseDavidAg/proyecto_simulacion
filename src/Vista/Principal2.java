@@ -4,9 +4,14 @@
  */
 package Vista;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Point;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollBar;
+import javax.swing.SwingUtilities;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 
 /**
  *
@@ -20,7 +25,16 @@ public class Principal2 extends javax.swing.JFrame {
     public Principal2() {
         initComponents();
         
- 
+         SwingUtilities.invokeLater(() -> {
+            jScrollPane2.getViewport().setViewPosition(new Point(200,0)); // Ajusta (x, y)
+        });
+         
+         // Personalizar las barras de desplazamiento
+        JScrollBar verticalScrollBar = jScrollPane2.getVerticalScrollBar();
+        verticalScrollBar.setUI(new Principal2.CustomScrollBarUI());
+
+        JScrollBar horizontalScrollBar = jScrollPane2.getHorizontalScrollBar();
+        horizontalScrollBar.setUI(new Principal2.CustomScrollBarUI());
        
     }
   
@@ -37,6 +51,7 @@ public class Principal2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
         Panel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -45,18 +60,25 @@ public class Principal2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(940, 570));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane2.setMaximumSize(new java.awt.Dimension(940, 570));
+        jScrollPane2.setMinimumSize(new java.awt.Dimension(940, 570));
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(940, 570));
+
         Panel1.setBackground(new java.awt.Color(0, 16, 33));
+        Panel1.setPreferredSize(new java.awt.Dimension(940, 940));
         Panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -144,6 +166,11 @@ public class Principal2 extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 38, 79));
         jPanel3.setForeground(new java.awt.Color(0, 38, 79));
 
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Gráficas");
+
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grafica.jpg"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,35 +178,30 @@ public class Principal2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Gráficas");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addContainerGap())
         );
 
-        Panel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 140, 170));
+        Panel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 160, 170));
 
         jPanel4.setBackground(new java.awt.Color(0, 38, 79));
         jPanel4.setForeground(new java.awt.Color(0, 38, 79));
@@ -201,13 +223,13 @@ public class Principal2 extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel6)))
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,7 +241,7 @@ public class Principal2 extends javax.swing.JFrame {
                 .addContainerGap(7, Short.MAX_VALUE))
         );
 
-        Panel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 130, 170));
+        Panel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 150, 170));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/external-link-297789_640.png"))); // NOI18N
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -227,9 +249,22 @@ public class Principal2 extends javax.swing.JFrame {
                 jButton2MouseClicked(evt);
             }
         });
-        Panel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, -1, -1));
+        Panel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, -1, -1));
 
-        getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 570));
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 16, 33));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("                                                                                                 \n  \t\t\t               OBJETIVO\n\n  Simular y analizar el impacto de factores ambientales, como la calidad del aire y la gestión de residuos, sobre la salud \ny la esperanza de vida de los habitantes de Oaxaca de Juárez, basándose en los hallazgos de la tesis.\n\nObjetivos Específicos:\n\n  •Desarrollar un modelo matemático que relacione la producción de desechos y  la calidad del aire con la incidencia \nde enfermedades y la esperanza de vida.\n •Evaluar  cómo  el   crecimiento poblacional y la contaminación influyen en la salud pública    y   en   las    tasas   de    \nmortalidad.\n •Generar una proyección sobre el comportamiento de la salud de la población en diferentes escenarios relacionados \ncon la gestiónde residuos y la calidad del aire\n\n\n\n\n\n");
+        jTextArea1.setBorder(null);
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel1.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, -1, -1));
+
+        jScrollPane2.setViewportView(Panel1);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -318,5 +353,40 @@ public class Principal2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+static class CustomScrollBarUI extends BasicScrollBarUI {
+        private static final int THUMB_SIZE = 10;
+
+        @Override
+        protected void configureScrollBarColors() {
+            this.thumbColor = new Color(0, 0, 0); // Color del "pulgar"
+            this.trackColor = new Color(230, 230, 230); // Color de la pista
+        }
+
+        protected Dimension getThumbSize() {
+            return new Dimension(THUMB_SIZE, THUMB_SIZE);
+        }
+
+        @Override
+        protected JButton createDecreaseButton(int orientation) {
+            return createZeroButton(); // Sin botones
+        }
+
+        @Override
+        protected JButton createIncreaseButton(int orientation) {
+            return createZeroButton(); // Sin botones
+        }
+
+        private JButton createZeroButton() {
+            JButton button = new JButton();
+            button.setPreferredSize(new Dimension(0, 0));
+            button.setMinimumSize(new Dimension(0, 0));
+            button.setMaximumSize(new Dimension(0, 0));
+            return button;
+        }
+    }
+    
 }
