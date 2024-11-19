@@ -1,4 +1,4 @@
-Poblacion sana inicial,"1,500,000,000","1,480,000,000","1,460,000,000","1,440,000,000",individuos
+Poblacion sana inicial,1500000000,1480000000,1460000000,1440000000,individuos
 Poblacion enferma inicial,150000000,160000000,170000000,180000000,individuos
 Tasa de recuperacion,65,63,64,62,porcentaje 
 Tasa de incidencia,7,7.2,7.5,7.8,porcentaje 
@@ -11,14 +11,14 @@ Equipos recolectados,40,42000,44000,46000,unidades
 Tasa de natalidad normal,2.5,2.4,2.3,2.2,percentaje
 Esperanza de vida normal,78,78,77,77,años
 Daño ambiental,50,55,60,65,unidaes
-Desechos Emitidos,"100,000,000","120,000,000","140,000,000","160,000,000",toneladas
+Desechos Emitidos,100000000,120000000,140000000,160000000,toneladas
 Tasa de natalidad,17987475,1.748.664,1.698.581,1.648.497,porcentaje 
-Nacimientos,1708810125,166.997.412,163.063.728,159.079.961,individuos
-Poblacion sana,8810125,1.897.412,10.863.728,18.299.605,individuos
+Nacimientos,1708810125,166997412,163063728,159079961,individuos
+Poblacion sana,8810125,1897412,10863728,18299605,individuos
 Recuperacion,4000,3888,3854,3735,individuos
 Incidencia,5700,5539,5376,5307.5,individuos
-Poblacion enferma,1633333333,1587,145.933.333,1512.5,individuos
-Muertes,6666666667,64,626.666.667,60,individuos
+Poblacion enferma,1633333333,1587,145933333,1512.5,individuos
+Muertes,6666666667,64,626666667,60,individuos
 Esperanza de vida,7.875,0.84,8.925,945,años
 Daño ambiental para natalidad,27,28,289,297,unidades
 Daño ambiental para esperanza de vida,11.25,12,12.75,13.5,unidades

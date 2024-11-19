@@ -271,7 +271,7 @@ public class Principal2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
-        Grafica_datos ventana = new Grafica_datos();
+        Ingresar_CSV ventana = new Ingresar_CSV();
                 ventana.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
