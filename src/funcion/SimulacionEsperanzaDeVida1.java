@@ -8,7 +8,9 @@ package funcion;
  *
  * @author ambro
  */
-
+//intento de graficar a partir de los datos del CSV, hay error en la libreria de apache y opencsv
+//librerias para metodos estadisticos como regresion lineal
+//libreria para leer un archivo CSV
 import com.opencsv.CSVReader;
 import org.apache.commons.math4.legacy.stat.regression.OLSMultipleLinearRegression;
 import org.jfree.chart.ChartFactory;

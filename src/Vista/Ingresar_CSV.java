@@ -74,7 +74,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
             model.addRow(values); // Agregar la fila al JTable
         }
 
-        JOptionPane.showMessageDialog(this, "CSV cargado correctamente desde los recursos del proyecto.");
+    
     } catch (IOException e) {
         JOptionPane.showMessageDialog(this, "Error al leer el archivo CSV: " + e.getMessage());
     }
@@ -82,7 +82,9 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
     
     //
     
-    simulacion.agregarGrafica(jPanel7, jSlider2.getValue());
+        simulacion.agregarGrafica(jPanel7, jSlider2.getValue());
+        simulacion.agregarGrafica(jPanel10, jSlider2.getValue());
+        simulacion.agregarGrafica(jPanel16, jSlider2.getValue());
         
     }
   
@@ -162,7 +164,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel1.setBackground(new java.awt.Color(0, 16, 33));
+        Panel1.setBackground(new java.awt.Color(255, 255, 255));
         Panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -178,12 +180,11 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 20, 490));
 
-        jPanel1.setBackground(new java.awt.Color(0, 38, 79));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setForeground(new java.awt.Color(0, 38, 79));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Ingresar Datos(Exel)");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BackButton.png"))); // NOI18N
@@ -198,26 +199,26 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel5)
-                .addGap(305, 305, 305)
+                .addGap(272, 272, 272)
                 .addComponent(jLabel4)
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(390, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        Panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 940, 70));
+        Panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 940, 80));
 
-        btnSeleccionar.setBackground(new java.awt.Color(0, 38, 79));
-        btnSeleccionar.setForeground(new java.awt.Color(0, 52, 107));
+        btnSeleccionar.setBackground(new java.awt.Color(153, 153, 153));
+        btnSeleccionar.setForeground(new java.awt.Color(153, 153, 153));
         btnSeleccionar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnSeleccionarMouseClicked(evt);
@@ -225,8 +226,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
         });
 
         jLabel13.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
         jLabel13.setText("Cargar");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mas.png"))); // NOI18N
@@ -286,12 +286,11 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
         jLabel3.setText("Ejemplo del archivo CSV a ingresar:");
         Panel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(0, 38, 79));
-        jPanel3.setForeground(new java.awt.Color(0, 38, 79));
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setForeground(new java.awt.Color(153, 153, 153));
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Visualizar Gráficas y Datos");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -313,7 +312,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 940, 40));
 
-        jPanel4.setBackground(new java.awt.Color(0, 98, 107));
+        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
         jPanel4.setForeground(new java.awt.Color(0, 98, 107));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -323,7 +322,6 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Esperanza de vida");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -345,8 +343,8 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 750, 790, 40));
 
-        jPanel5.setBackground(new java.awt.Color(0, 38, 79));
-        jPanel5.setForeground(new java.awt.Color(0, 52, 107));
+        jPanel5.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel5.setForeground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -378,7 +376,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 820, 790, 350));
 
-        jPanel9.setBackground(new java.awt.Color(0, 38, 79));
+        jPanel9.setBackground(new java.awt.Color(153, 153, 153));
         jPanel9.setForeground(new java.awt.Color(0, 52, 107));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -411,7 +409,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1300, -1, 360));
 
-        jPanel14.setBackground(new java.awt.Color(0, 98, 107));
+        jPanel14.setBackground(new java.awt.Color(153, 153, 153));
         jPanel14.setForeground(new java.awt.Color(0, 98, 107));
         jPanel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -421,7 +419,6 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         jLabel12.setBackground(new java.awt.Color(0, 0, 0));
         jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Tasa de natalidad");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -431,7 +428,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel12)
-                .addContainerGap(591, Short.MAX_VALUE))
+                .addContainerGap(624, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,7 +440,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1230, -1, -1));
 
-        jPanel15.setBackground(new java.awt.Color(0, 38, 79));
+        jPanel15.setBackground(new java.awt.Color(153, 153, 153));
         jPanel15.setForeground(new java.awt.Color(0, 52, 107));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -476,7 +473,7 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         Panel1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1790, -1, -1));
 
-        jPanel17.setBackground(new java.awt.Color(0, 98, 107));
+        jPanel17.setBackground(new java.awt.Color(153, 153, 153));
         jPanel17.setForeground(new java.awt.Color(0, 98, 107));
         jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -486,7 +483,6 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
         jLabel14.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Daño ambiental para esperanza de vida ");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -510,19 +506,16 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("(años)");
         Panel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 650, -1, -1));
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Resultado:");
         Panel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 760, -1, -1));
 
         jLabel16.setBackground(new java.awt.Color(0, 0, 0));
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Tiempo de simulación");
         Panel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 650, -1, -1));
 
@@ -534,7 +527,6 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
         jSlider1.setValueIsAdjusting(true);
         Panel1.add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 760, -1, -1));
 
-        jSlider2.setForeground(new java.awt.Color(255, 255, 255));
         jSlider2.setMajorTickSpacing(1);
         jSlider2.setMaximum(10);
         jSlider2.setMinorTickSpacing(1);
@@ -560,7 +552,8 @@ SimulacionEsperanzaDeVida simulacion = new SimulacionEsperanzaDeVida();
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         this.dispose();
-        
+        Principal2 ventana = new Principal2();
+        ventana.setVisible(true);
         
        
     }//GEN-LAST:event_jLabel5MouseClicked

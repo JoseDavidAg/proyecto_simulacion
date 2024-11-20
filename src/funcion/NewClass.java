@@ -15,6 +15,7 @@ import java.awt.*;
  *
  * @author ambro
  */
+//modifica la interfaz de jScroll para la ventana de contenidoCSV
 public class NewClass {
     
 
@@ -54,8 +55,8 @@ public class NewClass {
 
         @Override
         protected void configureScrollBarColors() {
-            this.thumbColor = new Color(100, 100, 200); // Color del "pulgar"
-            this.trackColor = new Color(230, 230, 230); // Color de la pista
+            this.thumbColor = new Color(153,153,153); // Color del "pulgar"
+            this.trackColor = new Color(255,255,255); // Color de la pista
         }
 
         protected Dimension getThumbSize() {

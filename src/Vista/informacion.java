@@ -60,10 +60,10 @@ public class Informacion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextArea2 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jTextArea3 = new javax.swing.JTextArea();
         jTextArea4 = new javax.swing.JTextArea();
+        jTextArea5 = new javax.swing.JTextArea();
 
         jPanel6.setBackground(new java.awt.Color(0, 38, 79));
         jPanel6.setForeground(new java.awt.Color(0, 38, 79));
@@ -99,15 +99,14 @@ public class Informacion extends javax.swing.JFrame {
         jScrollPane1.setMinimumSize(new java.awt.Dimension(940, 570));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(940, 570));
 
-        Panel1.setBackground(new java.awt.Color(0, 16, 33));
+        Panel1.setBackground(new java.awt.Color(255, 255, 255));
         Panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 38, 79));
-        jPanel1.setForeground(new java.awt.Color(0, 38, 79));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setForeground(new java.awt.Color(153, 153, 153));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setText("Información");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BackButton.png"))); // NOI18N
@@ -126,13 +125,13 @@ public class Informacion extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(330, 330, 330)
                 .addComponent(jLabel4)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(393, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4))
                 .addContainerGap(19, Short.MAX_VALUE))
@@ -140,39 +139,35 @@ public class Informacion extends javax.swing.JFrame {
 
         Panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 940, 70));
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setBackground(new java.awt.Color(0, 16, 33));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea2.setRows(5);
-        jTextArea2.setText("puntos críticos y proponer  mejoras en la gestión ambiental para aumentar  la  calidad  de vida y mitigar los efectos.");
-        jTextArea2.setBorder(null);
-        Panel1.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 810, 40));
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fabrica.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
         Panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
 
         jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(0, 16, 33));
+        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea3.setRows(5);
-        jTextArea3.setText("                                                                                      VARIABLES\n\n1. Tasa de natalidad\n\tEs el porcentaje de personas que nacen en un período determinado. Se ve afectado por factores\n\tcomo la salud general de la población y el daño ambiental.\n\n2. Nacimientos\n\tEs la cantidad total de personas que nacen en un período específico.           Depende de cuántas \n\tpersonas estén sanas y de la tasa de natalidad.\n\n3. Población Sana\n\tEs el número de personas que se encuentran en buen estado de salud.          Este número se ve \n\tinfluenciado por los nacimientos, la recuperación de enfermedades y    la incidencia de nuevas \n\tenfermedades.\n\n4. Recuperación\n\tEs el proceso mediante el cual una persona mejora su estado de salud. Se relaciona con la canti-\n\tdad de personas enfermas y la efectividad de los tratamientos.\n\n5. Incidencia\n\tEs el momento en el que una persona sana se convierte en enferma. Este indicador muestra cuán-\n\ttas personas sanas contraen enfermedades en un período dado.\n\n6. Población Enfermería\n\tEs el número de personas que tienen alguna enfermedad o complicación de salud. Este grupo se \n\tdetermina por la cantidad de nuevas enfermedades, muertes y recuperaciones.\n\n7. Muertes\n\tEs la cantidad de personas que fallecen en un período determinado, ya sea por enfermedades o \n\tcausas naturales. Este dato refleja la salud general de la población enferma.\n\n8. Esperanza de vida\n\tEs el tiempo promedio que se espera que una persona viva. Se ve afectado por condiciones gene-\n\trales de salud y factores ambientales.\n\n9. Daño Ambiental para Natalidad\n\tSe refiere a los efectos negativos del entorno, como la contaminación, que pueden influir en la ca-\n\tpacidad de las personas paratener hijos.\n\n10. Discrepancia\n\tEs la diferencia entre la capacidad de un relleno sanitario y su ocupación real. Muestra cuán bien \n\tse están gestionando los desechos.\n\n11. Inadecuada Ocupación del Relleno\n\tSe refiere a la cantidad de desechos producidos que no están siendo gestionados adecuadame-\n\tte. Indica problemas en el manejo de residuos.\n\n\t\t\t\n\t\t\t      MÉTODOS\n\n•Modelado Matemático por Ecuaciones Diferenciales\n\tSe   utilizan    ecuaciones    diferenciales   para    modelar el    comportamiento    dinámico de    \n\tlas variables en el tiempo  (como nacimientos, muertes   y la evolución de la población sana y \n\tenferma).\n\n•Regresión lineal múltiple\n\tEste método estadístico permite evaluar la influencia de múltiples factores independientes (co-\n\tmo contaminación del aire y rersiduos) sobre una ariable dependiente (esperanza de vida o ta-\n\tsa de enfermedades)\n\n•Análisis de sensibilidad\n\tSe emplea   para   determinar   cómo los cambios en los parámetros (como la frecuencia de \n\trecolección de basura)   afectan   los resultados del modelo. Esto permite identificar las varia-\n\tbles más críticas para la salud pública.\n\n•Análisis de correlación\n\tSe    calcula el coeficiente     de evaluación entre     variables (por ejemplo,   entre   desechos \n\tno   recolectados   y   enfermedades respiratorias) para entender la intensidad de sus relaciones.\n");
+        jTextArea3.setText("                                                                                            VARIABLES\n\n1. Tasa de natalidad\n\tEs el porcentaje de personas que nacen en un período determinado. Se ve afectado por factores\n\tcomo la salud general de la población y el daño ambiental.\n\n2. Nacimientos\n\tEs la cantidad total de personas que nacen en un período específico.           Depende de cuántas \n\tpersonas estén sanas y de la tasa de natalidad.\n\n3. Población Sana\n\tEs el número de personas que se encuentran en buen estado de salud.          Este número se ve \n\tinfluenciado por los nacimientos, la recuperación de enfermedades y    la incidencia de nuevas \n\tenfermedades.\n\n4. Recuperación\n\tEs el proceso mediante el cual una persona mejora su estado de salud. Se relaciona con la canti-\n\tdad de personas enfermas y la efectividad de los tratamientos.\n\n5. Incidencia\n\tEs el momento en el que una persona sana se convierte en enferma. Este indicador muestra cuán-\n\ttas personas sanas contraen enfermedades en un período dado.\n\n6. Población Enfermería\n\tEs el número de personas que tienen alguna enfermedad o complicación de salud. Este grupo se \n\tdetermina por la cantidad de nuevas enfermedades, muertes y recuperaciones.\n\n7. Muertes\n\tEs la cantidad de personas que fallecen en un período determinado, ya sea por enfermedades o \n\tcausas naturales. Este dato refleja la salud general de la población enferma.\n\n8. Esperanza de vida\n\tEs el tiempo promedio que se espera que una persona viva. Se ve afectado por condiciones gene-\n\trales de salud y factores ambientales.\n\n9. Daño Ambiental para Natalidad\n\tSe refiere a los efectos negativos del entorno, como la contaminación, que pueden influir en la ca-\n\tpacidad de las personas paratener hijos.\n\n10. Discrepancia\n\tEs la diferencia entre la capacidad de un relleno sanitario y su ocupación real. Muestra cuán bien \n\tse están gestionando los desechos.\n\n11. Inadecuada Ocupación del Relleno\n\tSe refiere a la cantidad de desechos producidos que no están siendo gestionados adecuadame-\n\tte. Indica problemas en el manejo de residuos.\n\n\t\t\t\n\t\t\t          MÉTODOS\n\n•Modelado Matemático por Ecuaciones Diferenciales\n\tSe   utilizan    ecuaciones    diferenciales   para    modelar el    comportamiento    dinámico de    \n\tlas variables en el tiempo  (como nacimientos, muertes   y la evolución de la población sana y \n\tenferma).\n\n•Regresión lineal múltiple\n\tEste método estadístico permite evaluar la influencia de múltiples factores independientes (co-\n\tmo contaminación del aire y rersiduos) sobre una ariable dependiente (esperanza de vida o ta-\n\tsa de enfermedades)\n\n•Análisis de sensibilidad\n\tSe emplea   para   determinar   cómo los cambios en los parámetros (como la frecuencia de \n\trecolección de basura)   afectan   los resultados del modelo. Esto permite identificar las varia-\n\tbles más críticas para la salud pública.\n\n•Análisis de correlación\n\tSe    calcula el coeficiente     de evaluación entre     variables (por ejemplo,   entre   desechos \n\tno   recolectados   y   enfermedades respiratorias) para entender la intensidad de sus relaciones.\n");
         jTextArea3.setBorder(null);
         Panel1.add(jTextArea3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 810, 1590));
 
         jTextArea4.setEditable(false);
-        jTextArea4.setBackground(new java.awt.Color(0, 16, 33));
+        jTextArea4.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea4.setColumns(20);
         jTextArea4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jTextArea4.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea4.setRows(5);
         jTextArea4.setText("El    impacto de     los factores ambientales,   como la contaminación\ndel aire y la deficiencia de gestión de residuos, tiene efectos directos\nen la salud pública y la esperanza de vida.             Este  proyecto   de\n simulación  se enfoca en analizar cómo estas variables afectan a   los\nhabitantes de Oaxaca de   Juárez. A través de un modelo matemático, \nse   establecen   relaciones   entre la  calidad del   aire,  los   residuos \ngenerados y la incidencia de enfermedades,   proyectando    distintos \n");
         jTextArea4.setBorder(null);
         Panel1.add(jTextArea4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 490, 220));
+
+        jTextArea5.setEditable(false);
+        jTextArea5.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jTextArea5.setRows(5);
+        jTextArea5.setText("puntos críticos y proponer  mejoras en la gestión ambiental para aumentar  la  calidad  de vida y mitigar los efectos.");
+        jTextArea5.setBorder(null);
+        Panel1.add(jTextArea5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 810, 40));
 
         jScrollPane1.setViewportView(Panel1);
 
@@ -230,9 +225,9 @@ public class Informacion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 
     static class CustomScrollBarUI extends BasicScrollBarUI {

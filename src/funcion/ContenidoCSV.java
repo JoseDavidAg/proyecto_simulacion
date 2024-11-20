@@ -6,6 +6,7 @@ package funcion;
 import java.util.ArrayList;
 import java.util.List;
 
+//permite visualizar el archivo csv dentro de JTable. Considero que apartir del arrego obtenido del CSV se puede trabajar para la graficacion
 public class ContenidoCSV {
     private List<String[]> filas;
 
